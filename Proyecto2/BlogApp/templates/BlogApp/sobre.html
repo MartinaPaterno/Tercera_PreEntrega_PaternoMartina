@@ -1,0 +1,15 @@
+{% extends 'BlogApp/base.html' %}
+
+{% block title %}Agregar Post{% endblock title %}
+
+{% block header %}Agregar Post{% endblock %}
+
+{% block contenido %}
+    
+    <form method="POST" action="{% url 'Sobre' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        
+    </form>
+{% endblock contenido%}

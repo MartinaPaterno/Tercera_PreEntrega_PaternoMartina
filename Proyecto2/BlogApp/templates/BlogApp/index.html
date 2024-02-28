@@ -1,0 +1,67 @@
+{% extends "BlogApp/base.html" %} 
+{% load static %}
+
+{% block contenido %}
+ <!-- Main Content-->
+ <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="post.html">
+                    <h2 class="post-title">Blog N°1</h2>
+                    <h3 class="post-subtitle"></h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">""""</a>
+                    on September 23, 2023
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="post.html"><h2 class="post-title">Blog N°2 </h2></a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">""</a>
+                    on September 18, 2023
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="post.html">
+                    <h2 class="post-title">Blog N°3</h2>
+                    <h3 class="post-subtitle"></h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">""</a>
+                    on August 24, 2023
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="post.html">
+                    <h2 class="post-title">Failure is not an option</h2>
+                    <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">Start Bootstrap</a>
+                    on July 8, 2023
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Pager-->
+            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Posts Más Antiguos →</a></div>
+        </div>
+    </div>
+</div>
+{% endblock  %}

@@ -1,0 +1,20 @@
+{% extends 'BlogApp/base.html' %}
+{% load static %}
+
+{% block title %}Listar Posts{% endblock title %}
+
+{% block header %}Listar Posts{% endblock %}
+
+{% block contenido %}
+    <h3>Listado de Posts</h3>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <p>Titulo: {{post.titulo }}</p>
+                <p>Contenido: {{post.contenido}}</p>
+            
+              
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock contenido%}
