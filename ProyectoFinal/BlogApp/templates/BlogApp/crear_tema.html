@@ -1,0 +1,19 @@
+{% extends 'BlogApp/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/crear_tema.css' %}">
+
+<h1>Crear nuevo tema</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Crear">
+</form>
+<div class="contenidoCentrado">
+  {% url 'Foro' as url %}
+  <button type="button" onclick="window.location.href='{{ url }}'">Volver al foro</button>
+</div>
+
+{% endblock contenido %}

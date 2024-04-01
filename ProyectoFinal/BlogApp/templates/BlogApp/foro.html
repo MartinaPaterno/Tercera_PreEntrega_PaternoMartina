@@ -1,0 +1,30 @@
+{% extends 'BlogApp/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/foro.css' %}">
+
+<div class="contenido">
+  <h3>Contenido</h3>
+  <ul>
+    {% for tema in temas %}
+
+      <li> {{t}} </li>
+        <li><a href="{% url 'DetalleTema' %}">{{ tema.titulo }}</a> - Creado por {{ tema.creador }}</li>
+        <div style="margin-top: 20px;">
+        {% url 'CrearTema' as url %}
+        <button type="button" onclick="window.location.href='{{ url }}'">Crear nuevo tema</button>
+        {%url 'EditarTema' as url%}
+        <button type="button" onclick="window.location.href='{{ url }}'">Editar</button>
+        {%url 'EliminarTema' as url %}
+        <button type="button" onclick="window.location.href='{{ url }}'">Eliminar</button>
+        
+    </div>
+    {% empty %}
+      <li>No hay temas disponibles.</li>
+    {% endfor %}
+  </ul>
+  
+</div>
+{% endblock contenido %}

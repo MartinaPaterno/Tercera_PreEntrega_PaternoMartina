@@ -1,0 +1,24 @@
+{% extends 'BlogApp/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+
+        <h1> Bienvenidos, mi nombre es Martina! </h1>
+
+        <body>
+        <h5>Un poco sobre mí: </h5>
+        <p> Nací en Buenos Aires, Argentina por el 2001.<p>
+        <p> Soy estudiante de Medicina, un rubro bastante distinto al de la programación, pero similar en muchas cosas como: la organización, la constancia y el esfuerzo para seguir aprendiendo.</p>
+        <p> Espero poder seguir juntando experiencia y aprendizaje.</p>
+        <p> ¡Gracias por su tiempo!<p>
+
+
+        <div style="margin-top: 20px;">
+            {% url 'Inicio' as url %}
+            <h5><button class="center" type="button" onclick="window.location.href='{{ url }}'">Volver al inicio</button></h5>
+        </div>
+
+{% endblock contenido%}

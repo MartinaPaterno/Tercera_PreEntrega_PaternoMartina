@@ -1,0 +1,15 @@
+{% extends 'BlogApp/base.html' %}
+
+{% load static %}
+
+{% block contenido%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/foro.css' %}">
+
+<div class="contenidoCentrado">
+  <h3>Listado</h3>
+  {% for tema in temas %}
+  <li>{{tema}}</li>
+  <li><a href="{% url 'DetalleTema' %}">{{ tema.titulo }}</a> - Creado por {{ tema.creador }}</li>
+{% endfor %}
+</body>
+{% endblock contenido %}

@@ -1,0 +1,18 @@
+{% extends 'BlogApp/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<link rel="stylesheet" type="text/css" href="{% static 'conversacion_crear.css' %}">
+
+<div class="container">
+  <h1>Crear Conversación</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+{% endblock contenido%}

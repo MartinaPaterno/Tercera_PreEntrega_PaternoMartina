@@ -1,0 +1,20 @@
+{% extends 'BlogApp/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+      <h3>Confirmar Eliminación</h3>
+      <div class= 'contenidoCentrado'>
+       
+       <form method="POST">
+           {% csrf_token %}
+           <p>¿Estás seguro de que deseas eliminar el post {{tema}}?</p>
+            <input type="submit" value= "Submit">
+                
+        </form>
+    
+    </div>
+
+{% endblock contenido %}
